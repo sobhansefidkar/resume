@@ -1,0 +1,100 @@
+.services-section{
+    width: 100%;
+    height: auto;
+}
+.services-title{
+    width: 100%;
+    height: 70px;
+    background-color: #161b21;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.services-title>h2{
+    width: 200px;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    text-align: center;
+}
+.services-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.s-c-item{
+    width: 280px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.s-c-item.fir{
+    background-image: url(../../../public/images/mernicon.png);
+}
+.s-c-item.sec{
+    background-image: url(../../../public/images/apiicon.png);
+}
+.s-c-item.thi{
+    background-image: url(../../../public/images/reacticon.jpg);
+}
+.s-c-item.for{
+    background-image: url(../../../public/images/supporetr.jpg);
+}
+.s-c-item::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #161b219e;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.s-c-item:hover:before , .s-c-item:hover .border{
+    opacity: 1;
+    visibility: visible;
+}
+.border{
+    width: 85%;
+    height: 85%;
+    border: 2px solid white;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.s-c-item.fir::before{
+    content: "MERN توسعه سایت با";
+}
+.s-c-item.sec::before{
+    content: "NODE.JS نویسی با API";
+}
+.s-c-item.thi::before{
+    content: "REACT ساخت قالب";
+}
+.s-c-item.for::before{
+    content: "پشتیبان سایت";
+}
+@media screen and (max-width : 1200px) {
+    .services-container{
+        height: auto;
+    }
+}
